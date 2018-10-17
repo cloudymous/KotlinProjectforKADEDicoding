@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kotlin Project for KADE Dicoding</string>
+    <string name="ganti_text">Ganti Text</string>
 </resources>
