@@ -13,14 +13,27 @@ class MainActivity : AppCompatActivity() {
 
         var textInput = "Belajar Kotlin"
 
+
+
         val textview = findViewById(R.id.textTV) as TextView
+        val namaTV = findViewById(R.id.namaTV) as TextView
+        val nipTV = findViewById(R.id.nipTV) as TextView
+
         val buttonChange = findViewById(R.id.prosesBT) as Button
+        val buttonTampilnama = findViewById(R.id.tampilBT) as Button
 
         textview.setText(textInput)
 
         buttonChange.setOnClickListener {
             textInput = "Ganti Text"
             textview.setText(textInput)
+        }
+
+        val imran = Pengguna("Imran", 123)
+
+        buttonTampilnama.setOnClickListener {
+            namaTV.setText(imran.getNama())
+            nipTV.setText(imran.getNomorInduk())
         }
     }
 }
