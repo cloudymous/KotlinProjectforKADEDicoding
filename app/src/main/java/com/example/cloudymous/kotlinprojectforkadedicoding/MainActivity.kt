@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var textInput = "Belajar Kotlin"
+        val textInput = "Belajar Kotlin"
 
         val textview = findViewById(R.id.textTV) as TextView
         val buttonChange = findViewById(R.id.prosesBT) as Button
