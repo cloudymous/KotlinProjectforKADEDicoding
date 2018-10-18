@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,25 +15,23 @@ class MainActivity : AppCompatActivity() {
 
         var textInput = "Belajar Kotlin"
 
+//        val textview = findViewById(R.id.textTV) as TextView
+//        val namaTV = findViewById(R.id.namaTV) as TextView
+//        val nipTV = findViewById(R.id.nipTV) as TextView
 
+//        val buttonChange = findViewById(R.id.prosesBT) as Button
+//        val buttonTampilnama = findViewById(R.id.tampilBT) as Button
+//        val buttonNextIntent = findViewById(R.id.nextIntentBT) as Button
 
-        val textview = findViewById(R.id.textTV) as TextView
-        val namaTV = findViewById(R.id.namaTV) as TextView
-        val nipTV = findViewById(R.id.nipTV) as TextView
+        textTV.setText(textInput)
 
-        val buttonChange = findViewById(R.id.prosesBT) as Button
-        //val buttonTampilnama = findViewById(R.id.tampilBT) as Button
-        val buttonNextIntent = findViewById(R.id.nextIntentBT) as Button
-
-        textview.setText(textInput)
-
-        buttonChange.setOnClickListener {
+        prosesBT.setOnClickListener {
             textInput = "Ganti Text"
-            textview.setText(textInput)
+            textTV.setText(textInput)
         }
 
 
-        buttonNextIntent.setOnClickListener {
+        nextIntentBT.setOnClickListener {
             val nextRecycle = Intent(this, RecyclerViewActivity::class.java)
             startActivity(nextRecycle)
         }
