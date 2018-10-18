@@ -1,6 +1,6 @@
 package com.example.cloudymous.kotlinprojectforkadedicoding
 
-data class Pengguna (nama: String, nomorInduk: Int){
+data class Pengguna (val nama: String, val nomorInduk: Int){
 
     val mNama = nama
     val mNomorInduk = nomorInduk
