@@ -1,5 +1,6 @@
 package com.example.cloudymous.kotlinprojectforkadedicoding
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val nipTV = findViewById(R.id.nipTV) as TextView
 
         val buttonChange = findViewById(R.id.prosesBT) as Button
-        val buttonTampilnama = findViewById(R.id.tampilBT) as Button
+        //val buttonTampilnama = findViewById(R.id.tampilBT) as Button
         val buttonNextIntent = findViewById(R.id.nextIntentBT) as Button
 
         textview.setText(textInput)
@@ -30,11 +31,16 @@ class MainActivity : AppCompatActivity() {
             textview.setText(textInput)
         }
 
-        val imran = Pengguna("Imran", 123)
+        //val imran = Pengguna("Imran", 123)
 
-        buttonTampilnama.setOnClickListener {
-            namaTV.setText(imran.getNama())
-            nipTV.setText(imran.getNomorInduk())
+        buttonNextIntent.setOnClickListener {
+            val nextRecycle = Intent(this, RecyclerViewActivity::class.java)
+            startActivity(nextRecycle)
         }
+
+//        buttonTampilnama.setOnClickListener {
+//            namaTV.setText(imran.getNama())
+//            nipTV.setText(imran.getNomorInduk())
+//        }
     }
 }
