@@ -5,9 +5,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import kotlinx.android.synthetic.main.club_list.*
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.club_list.view.*
 
 class RecyclerViewAdapter(private val context: Context, private val items: List<Club>, private val listener: (Club) -> Unit)
     : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
@@ -23,12 +23,12 @@ class RecyclerViewAdapter(private val context: Context, private val items: List<
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
-        private val name = view.findViewById<TextView>(R.id.name)
-        private val image = view.findViewById<ImageView>(R.id.image)
+//        private val name = view.findViewById<TextView>(R.id.name)
+//        private val image = view.findViewById<ImageView>(R.id.image)
 
         fun bindItem(items: Club, listener: (Club) -> Unit) {
-            name.text = items.name
-            items.image?.let { Picasso.get().load(it).into(image) }
+            itemView.name.text = items.name
+            itemView.image?.let { Picasso.get().load(it).into(itemView.image) }
             itemView.setOnClickListener{
                 listener(items)
             }

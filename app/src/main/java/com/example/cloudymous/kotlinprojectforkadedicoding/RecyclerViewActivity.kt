@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_recycler_view.*
 
 class RecyclerViewActivity : AppCompatActivity() {
 
@@ -14,12 +15,12 @@ class RecyclerViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)
 
-        val list = findViewById<RecyclerView>(R.id.club_list)
+//        val list = findViewById<RecyclerView>(R.id.club_list)
         initData()
 
-        list.layoutManager = LinearLayoutManager(this)
+        club_list.layoutManager = LinearLayoutManager(this)
 
-        list.adapter = RecyclerViewAdapter(this, clubs){
+        club_list.adapter = RecyclerViewAdapter(this, clubs){
             val toast = Toast.makeText(applicationContext, it.name, Toast.LENGTH_SHORT)
             toast.show()
         }
