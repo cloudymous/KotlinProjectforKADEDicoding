@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonChange = findViewById(R.id.prosesBT) as Button
         val buttonTampilnama = findViewById(R.id.tampilBT) as Button
+        val buttonNextIntent = findViewById(R.id.nextIntentBT) as Button
 
         textview.setText(textInput)
 

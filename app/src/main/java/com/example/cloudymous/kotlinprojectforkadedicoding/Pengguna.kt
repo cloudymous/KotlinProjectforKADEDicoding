@@ -1,15 +1,15 @@
 package com.example.cloudymous.kotlinprojectforkadedicoding
 
-open class Pengguna constructor(private val nama: String, private val nomorInduk: Int){
+data class Pengguna (nama: String, nomorInduk: Int){
 
-    var mNama = nama
-    var mNomorInduk = nomorInduk
+    val mNama = nama
+    val mNomorInduk = nomorInduk
 
-    open fun getNama(): String{
+    fun getNama(): String{
         return mNama
     }
 
-    open fun getNomorInduk(): Int{
+    fun getNomorInduk(): Int{
         return  mNomorInduk
     }
 }
