@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             textview.setText(textInput)
         }
 
-        //val imran = Pengguna("Imran", 123)
 
         buttonNextIntent.setOnClickListener {
             val nextRecycle = Intent(this, RecyclerViewActivity::class.java)
