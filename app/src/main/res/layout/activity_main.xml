@@ -1,51 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="@dimen/activity_vertical_margin"
         tools:context=".MainActivity">
 
-    <TextView
-            android:id="@+id/namaTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Nama"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.231"/>
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:scaleType="centerCrop"
+               android:src="@drawable/bg"/>
 
-    <TextView
-            android:id="@+id/nipTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="NIP"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.325"
-            app:layout_constraintHorizontal_bias="0.501"/>
 
     <TextView
             android:id="@+id/textTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             tools:text="@string/app_name"/>
 
     <Button
             android:id="@+id/prosesBT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/textTV"
             android:text="@string/ganti_text"/>
 
     <Button
             android:id="@+id/nextIntentBT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/prosesBT"
             android:text="@string/next_intent"/>
 
-</LinearLayout>
+</RelativeLayout>
