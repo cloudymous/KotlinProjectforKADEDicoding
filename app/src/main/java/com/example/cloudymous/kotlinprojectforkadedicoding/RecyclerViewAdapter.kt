@@ -5,8 +5,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.cloudymous.kotlinprojectforkadedicoding.R.id.image
 import kotlinx.android.synthetic.main.club_list.*
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Picasso.*
 import kotlinx.android.synthetic.main.club_list.view.*
 
 class RecyclerViewAdapter(private val context: Context, private val items: List<Club>, private val listener: (Club) -> Unit)
@@ -28,7 +30,8 @@ class RecyclerViewAdapter(private val context: Context, private val items: List<
 
         fun bindItem(items: Club, listener: (Club) -> Unit) {
             itemView.name.text = items.name
-            itemView.image?.let { Picasso.get().load(it).into(itemView.image) }
+//            itemView.image?.let { itemView.image.setImageResource(it) }
+            itemView.image?.let { Picasso.get().load(it).into(image) }
             itemView.setOnClickListener{
                 listener(items)
             }

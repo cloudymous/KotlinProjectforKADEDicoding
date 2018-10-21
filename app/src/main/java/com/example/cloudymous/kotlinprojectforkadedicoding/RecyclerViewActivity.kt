@@ -27,6 +27,19 @@ class RecyclerViewActivity : AppCompatActivity() {
     }
 
     private fun initData(){
+
+//        var clubs: ArrayList<Club> = ArrayList()
+//        clubs.add(Club("Barcelona", R.drawable.img_barca))
+//        clubs.add(Club("Real Madrid", R.drawable.img_madrid))
+//        clubs.add(Club("Bayern Munchen", R.drawable.img_bayern))
+//        clubs.add(Club("Manchester City", R.drawable.img_city))
+//        clubs.add(Club("Manchester United", R.drawable.img_mu))
+//        clubs.add(Club("Chelsea", R.drawable.img_chelsea))
+//        clubs.add(Club("AC Milan", R.drawable.img_acm))
+//        clubs.add(Club("Manchester City", R.drawable.img_arsenal))
+
+
+    private fun initData(){
         val name = resources.getStringArray(R.array.club_name)
         val image = resources.obtainTypedArray(R.array.club_image)
         clubs.clear()
@@ -35,7 +48,7 @@ class RecyclerViewActivity : AppCompatActivity() {
                 image.getResourceId(i, 0)))
         }
 
-        //Recycle the typed array
+//        Recycle the typed array
         image.recycle()
     }
 
