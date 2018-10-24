@@ -1,5 +1,6 @@
 package com.example.cloudymous.kotlinprojectforkadedicoding
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -19,8 +20,10 @@ class RecyclerViewActivity : AppCompatActivity() {
         club_list.layoutManager = LinearLayoutManager(this)
 
         club_list.adapter = RecyclerViewAdapter(this, clubs) {
-            val toast = Toast.makeText(applicationContext, it.name, Toast.LENGTH_SHORT)
-            toast.show()
+//            val toast = Toast.makeText(applicationContext, it.name, Toast.LENGTH_SHORT)
+//            toast.show()
+            val intent = Intent(this, DetailGrup::class.java)
+            startActivity(intent)
         }
     }
 
